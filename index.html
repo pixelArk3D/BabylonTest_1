@@ -68,6 +68,12 @@ var camera = new BABYLON.ArcRotateCamera("camera", BABYLON.Tools.ToRadians(90), 
 
     // Default intensity is 1. Let's dim the light a small amount
     light.intensity = 0.7;
+    
+ // Our built-in 'sphere' shape.
+var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter: 2, segments: 32}, scene);
+
+// Move the sphere upward 1/2 its height
+sphere.position.y = 1;
 
     BABYLON.SceneLoader.ImportMeshAsync("", "https://github.com/pixelArk3D/BabylonTest_1/blob/main/MyModel.glb", "MyModel"); //Empty string loads all meshes
     // Our built-in 'ground' shape.
