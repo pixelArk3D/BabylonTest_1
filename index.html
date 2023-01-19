@@ -20,7 +20,8 @@
         <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
         <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
         <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
-
+        <script src="https://cdn.babylonjs.com/viewer/babylon.viewer.js"></script>
+        
         <style>
             html, body {
                 overflow: hidden;
@@ -75,7 +76,9 @@ var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter: 2, segments: 
 // Move the sphere upward 1/2 its height
 sphere.position.y = 1;
 
-    BABYLON.SceneLoader.ImportMeshAsync("", "https://github.com/pixelArk3D/BabylonTest_1/blob/main/MyModel.glb", "MyModel"); //Empty string loads all meshes
+   // BABYLON.SceneLoader.ImportMeshAsync("", "https://github.com/pixelArk3D/BabylonTest_1/blob/main/MyModel.glb", "MyModel"); //Empty string loads all meshes
+            
+            <babylon model="https://github.com/pixelArk3D/BabylonTest_1/blob/main/MyModel.glb"></babylon>
     // Our built-in 'ground' shape.
     var ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 6, height: 6}, scene);
     let groundMaterial = new BABYLON.StandardMaterial("Ground Material", scene);
